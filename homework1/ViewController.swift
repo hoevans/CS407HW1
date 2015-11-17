@@ -12,21 +12,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var answer1: UITextField!
     
-    @IBOutlet weak var answer2: UITextField!
-    
-    @IBOutlet weak var score: UILabel!
+//    @IBOutlet weak var answer2: UITextField!
+//    
+//    @IBOutlet weak var score: UILabel!
     
     
     @IBAction func submit(sender: AnyObject) {
-        if answer1?.text == "CARTMAN" && answer2?.text == "ELEVEN" {
-            score?.text = "2/2"
-        } else if answer1?.text == "CARTMAN" {
-            score?.text = "1/2"
-        } else if answer2?.text == "ELEVEN" {
-            score?.text = "1/2"
-        } else {
-            score?.text = "0/2"
-        }
+//        if answer1?.text == "CARTMAN" && answer2?.text == "ELEVEN" {
+//            score?.text = "2/2"
+//        } else if answer1?.text == "CARTMAN" {
+//            score?.text = "1/2"
+//        } else if answer2?.text == "ELEVEN" {
+//            score?.text = "1/2"
+//        } else {
+//            score?.text = "0/2"
+//        }
+        self .performSegueWithIdentifier("to2nd", sender: answer1?.text)
     }
     
     override func viewDidLoad() {
@@ -53,8 +54,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(textField: UITextField) {
         print("end ")
-        answer1?.text = answer1?.text
-        answer2?.text = answer2?.text
+//        answer1?.text = answer1?.text
+//        answer2?.text = answer2?.text
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "to2nd" {
+            if let vc = segue.destinationViewController as? secViewController{
+                vc.scoreFromFirst = (sender as? String)!
+            }
+        }
     }
 
 }

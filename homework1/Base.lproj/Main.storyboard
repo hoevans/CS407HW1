@@ -32,7 +32,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="84Z-Jv-L8I" kind="show" id="uPy-Cb-eQg"/>
+                                    <action selector="submit:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Tiv-j4-RJa"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LKR-LX-tUD">
@@ -59,16 +59,17 @@
                     </view>
                     <connections>
                         <outlet property="answer1" destination="LKR-LX-tUD" id="T4B-Ff-ktI"/>
+                        <segue destination="84Z-Jv-L8I" kind="show" identifier="to2nd" id="yL0-9L-xrh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="380" y="313"/>
         </scene>
-        <!--View Controller-->
+        <!--Sec View Controller-->
         <scene sceneID="nfK-If-LbC">
             <objects>
-                <viewController id="84Z-Jv-L8I" customClass="ViewController" customModule="homework1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="secViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="84Z-Jv-L8I" customClass="secViewController" customModule="homework1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CNQ-Yy-Icz"/>
                         <viewControllerLayoutGuide type="bottom" id="NXh-0J-WlS"/>
@@ -87,9 +88,6 @@
                                 <rect key="frame" x="16" y="290" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                                <connections>
-                                    <outlet property="delegate" destination="84Z-Jv-L8I" id="qJM-CL-TAv"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rn6-Hi-amT">
                                 <rect key="frame" x="535" y="28" width="49" height="30"/>
@@ -97,7 +95,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="submit:" destination="84Z-Jv-L8I" eventType="touchUpInside" id="4gT-g0-oCY"/>
                                     <segue destination="OEj-rg-qD6" kind="show" id="3gI-eE-CVp"/>
                                 </connections>
                             </button>
@@ -114,18 +111,15 @@
                             <constraint firstAttribute="trailing" secondItem="ZHX-Z2-ibW" secondAttribute="trailing" constant="71" id="uM4-Kg-pRz"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="answer2" destination="Sks-dD-276" id="b3e-pK-Fz2"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPB-F7-2QA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1119" y="313"/>
         </scene>
-        <!--View Controller-->
+        <!--Thr View Controller-->
         <scene sceneID="Ox5-TY-6Yn">
             <objects>
-                <viewController id="OEj-rg-qD6" customClass="ViewController" customModule="homework1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OEj-rg-qD6" customClass="thrViewController" customModule="homework1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T5t-eT-RKp"/>
                         <viewControllerLayoutGuide type="bottom" id="fBY-xU-VVY"/>

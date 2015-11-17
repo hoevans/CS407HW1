@@ -14,6 +14,8 @@
 		5CC98EBE1BFAB1A800CE5B5E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CC98EBC1BFAB1A800CE5B5E /* LaunchScreen.xib */; };
 		5CC98ECA1BFAB1A800CE5B5E /* homework1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC98EC91BFAB1A800CE5B5E /* homework1Tests.swift */; };
 		5CC98ED41BFAB24D00CE5B5E /* cartman.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5CC98ED31BFAB24D00CE5B5E /* cartman.jpeg */; };
+		5CC98ED61BFBD62900CE5B5E /* secViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC98ED51BFBD62900CE5B5E /* secViewController.swift */; };
+		5CC98ED81BFBD63900CE5B5E /* thrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC98ED71BFBD63900CE5B5E /* thrViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		5CC98EC81BFAB1A800CE5B5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CC98EC91BFAB1A800CE5B5E /* homework1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homework1Tests.swift; sourceTree = "<group>"; };
 		5CC98ED31BFAB24D00CE5B5E /* cartman.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cartman.jpeg; sourceTree = "<group>"; };
+		5CC98ED51BFBD62900CE5B5E /* secViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secViewController.swift; sourceTree = "<group>"; };
+		5CC98ED71BFBD63900CE5B5E /* thrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thrViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 				5CC98ED31BFAB24D00CE5B5E /* cartman.jpeg */,
 				5CC98EB31BFAB1A800CE5B5E /* AppDelegate.swift */,
 				5CC98EB51BFAB1A800CE5B5E /* ViewController.swift */,
+				5CC98ED51BFBD62900CE5B5E /* secViewController.swift */,
+				5CC98ED71BFBD63900CE5B5E /* thrViewController.swift */,
 				5CC98EB71BFAB1A800CE5B5E /* Main.storyboard */,
 				5CC98EBA1BFAB1A800CE5B5E /* Images.xcassets */,
 				5CC98EBC1BFAB1A800CE5B5E /* LaunchScreen.xib */,
@@ -216,7 +222,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CC98ED61BFBD62900CE5B5E /* secViewController.swift in Sources */,
 				5CC98EB61BFAB1A800CE5B5E /* ViewController.swift in Sources */,
+				5CC98ED81BFBD63900CE5B5E /* thrViewController.swift in Sources */,
 				5CC98EB41BFAB1A800CE5B5E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
