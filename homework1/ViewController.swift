@@ -8,8 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var answer1: UITextField!
+    
+    @IBOutlet weak var answer2: UITextField!
+    
+    @IBOutlet weak var score: UILabel!
+    
+    
+    @IBAction func submit(sender: AnyObject) {
+        if answer1?.text == "CARTMAN" && answer2?.text == "ELEVEN" {
+            score?.text = "2/2"
+        } else if answer1?.text == "CARTMAN" {
+            score?.text = "1/2"
+        } else if answer2?.text == "ELEVEN" {
+            score?.text = "1/2"
+        } else {
+            score?.text = "0/2"
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +38,24 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func viewWillAppear(animated: Bool) {
+        print("will appear ")
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        print("did appear ")
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        print("begin ")
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        print("end ")
+        answer1?.text = answer1?.text
+        answer2?.text = answer2?.text
+    }
 
 }
 
