@@ -88,6 +88,9 @@
                                 <rect key="frame" x="16" y="290" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <connections>
+                                    <outlet property="delegate" destination="84Z-Jv-L8I" id="H0m-sF-Wex"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rn6-Hi-amT">
                                 <rect key="frame" x="535" y="28" width="49" height="30"/>
@@ -95,7 +98,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="OEj-rg-qD6" kind="show" id="3gI-eE-CVp"/>
+                                    <action selector="submit:" destination="84Z-Jv-L8I" eventType="touchUpInside" id="sgL-qC-TOd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -111,6 +114,10 @@
                             <constraint firstAttribute="trailing" secondItem="ZHX-Z2-ibW" secondAttribute="trailing" constant="71" id="uM4-Kg-pRz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answer2" destination="Sks-dD-276" id="Lh1-6X-znD"/>
+                        <segue destination="OEj-rg-qD6" kind="show" identifier="to3rd" id="iF0-IQ-DOf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPB-F7-2QA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,7 +126,7 @@
         <!--Thr View Controller-->
         <scene sceneID="Ox5-TY-6Yn">
             <objects>
-                <viewController storyboardIdentifier="rViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OEj-rg-qD6" customClass="thrViewController" customModule="homework1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="thrViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OEj-rg-qD6" customClass="thrViewController" customModule="homework1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T5t-eT-RKp"/>
                         <viewControllerLayoutGuide type="bottom" id="fBY-xU-VVY"/>
@@ -150,7 +157,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="score" destination="HcE-UR-jfq" id="n6l-On-stw"/>
+                        <outlet property="userScore" destination="HcE-UR-jfq" id="yuy-yU-KhP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hsL-h2-3Zh" userLabel="First Responder" sceneMemberID="firstResponder"/>
